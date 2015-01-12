@@ -164,6 +164,7 @@
     <string name="action_settings">Settings</string>
     <string name="app_name">LeagueApp</string>
     <string name="hello_world">Hello world!</string>
+    <string name="tab_player_stats">Statistics</string>
     <!-- From: file:/D:/Code/LeagueApp/LeagueApp/app/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">

@@ -1,39 +1,35 @@
 package com.leagueapp.alynchos.leagueapp;
 
-import android.support.v7.app.ActionBarActivity;
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+
+import com.leagueapp.alynchos.leagueapp.Debug.Logger;
 
 
-public class SplashScreen extends ActionBarActivity {
+public class SplashScreen extends Activity {
+
+    /* Debugging variables */
+    private static final String TAG = SplashScreen.class.getSimpleName();
+    private static final Logger logger = new Logger(TAG);
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.splahs_screen_layout);
-    }
-
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_splash_screen, menu);
-        return true;
+        logger.debug("onCreate called");
     }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
+    protected void onResume() {
+        super.onResume();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
+        logger.debug("OnResume");
 
-        return super.onOptionsItemSelected(item);
+        // Create an Intent that will start the main activity.  Pass extras through to TabBar
+        Intent mainIntent = new Intent(SplashScreen.this, LoLTabBarActivity.class);
+        mainIntent.putExtras(getIntent());
+        this.startActivity(mainIntent);
+        this.finish();
     }
+
 }

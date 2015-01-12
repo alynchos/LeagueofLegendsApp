@@ -1394,8 +1394,9 @@ containing a value of this type.
         public static final int abc_search_dropdown_item_icons_2line=0x7f030014;
         public static final int abc_search_view=0x7f030015;
         public static final int abc_simple_dropdown_hint=0x7f030016;
-        public static final int splahs_screen_layout=0x7f030017;
-        public static final int support_simple_spinner_dropdown_item=0x7f030018;
+        public static final int player_stats_layout=0x7f030017;
+        public static final int splash_screen_layout=0x7f030018;
+        public static final int support_simple_spinner_dropdown_item=0x7f030019;
     }
     public static final class menu {
         public static final int menu_splash_screen=0x7f0c0000;
@@ -1420,6 +1421,7 @@ containing a value of this type.
         public static final int action_settings=0x7f0a0010;
         public static final int app_name=0x7f0a0011;
         public static final int hello_world=0x7f0a0012;
+        public static final int tab_player_stats=0x7f0a0013;
     }
     public static final class style {
         /**  Customize your theme here. 

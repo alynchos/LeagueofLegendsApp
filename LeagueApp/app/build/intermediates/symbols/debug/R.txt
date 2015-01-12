@@ -422,8 +422,9 @@ int layout abc_screen_toolbar 0x7f030013
 int layout abc_search_dropdown_item_icons_2line 0x7f030014
 int layout abc_search_view 0x7f030015
 int layout abc_simple_dropdown_hint 0x7f030016
-int layout splahs_screen_layout 0x7f030017
-int layout support_simple_spinner_dropdown_item 0x7f030018
+int layout player_stats_layout 0x7f030017
+int layout splash_screen_layout 0x7f030018
+int layout support_simple_spinner_dropdown_item 0x7f030019
 int menu menu_splash_screen 0x7f0c0000
 int string abc_action_bar_home_description 0x7f0a0000
 int string abc_action_bar_home_description_format 0x7f0a0001
@@ -444,6 +445,7 @@ int string abc_toolbar_collapse_description 0x7f0a000f
 int string action_settings 0x7f0a0010
 int string app_name 0x7f0a0011
 int string hello_world 0x7f0a0012
+int string tab_player_stats 0x7f0a0013
 int style AppTheme 0x7f0b0000
 int style Base_TextAppearance_AppCompat 0x7f0b0001
 int style Base_TextAppearance_AppCompat_Body1 0x7f0b0002
