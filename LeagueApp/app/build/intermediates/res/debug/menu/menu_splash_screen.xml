@@ -4,4 +4,4 @@
     <item android:id="@+id/action_settings" android:title="@string/action_settings"
         android:orderInCategory="100" app:showAsAction="never" />
 </menu>
-<!-- From: file:/D:/Code/LeagueApp/LeagueApp/app/src/main/res/menu/menu_splash_screen.xml -->
+<!-- From: file:/C:/Users/ChiralAlchemist/Documents/LoLApi/LeagueApp/app/src/main/res/menu/menu_splash_screen.xml -->

@@ -347,7 +347,7 @@ int id action_menu_presenter 0x7f080003
 int id action_mode_bar 0x7f08002e
 int id action_mode_bar_stub 0x7f08002d
 int id action_mode_close_button 0x7f080020
-int id action_settings 0x7f08003f
+int id action_settings 0x7f080047
 int id activity_chooser_view_content 0x7f080021
 int id always 0x7f080016
 int id beginning 0x7f080013
@@ -393,6 +393,14 @@ int id showTitle 0x7f080011
 int id split_action_bar 0x7f080007
 int id submit_area 0x7f08003c
 int id tabMode 0x7f08000b
+int id textView 0x7f080045
+int id text_Rwins 0x7f080043
+int id text_kda 0x7f080046
+int id text_rank 0x7f080041
+int id text_rankStats 0x7f080042
+int id text_rloses 0x7f080044
+int id text_summonerName 0x7f080040
+int id text_test 0x7f08003f
 int id title 0x7f080027
 int id up 0x7f080008
 int id useLogo 0x7f080012

@@ -6,7 +6,94 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="HELLO LEAGUE APP OF DESTINY"/>
+        android:text="HELLO LEAGUE APP OF DESTINY"
+        android:id="@+id/text_test"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_test"
+        android:text="Summoner Name : "
+        android:id="@+id/text_summonerName"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Example1"
+        android:layout_below="@id/text_test"
+        android:layout_toRightOf="@id/text_summonerName"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rank:"
+        android:layout_below="@id/text_summonerName"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Example2"
+        android:layout_below="@id/text_summonerName"
+        android:layout_toRightOf="@id/text_summonerName"
+        android:id="@+id/text_rank"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ranked"
+        android:layout_below="@id/text_rank"
+        android:id="@+id/text_rankStats"/>
 
 
+     />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wins:"
+        android:layout_below="@id/text_rankStats"
+        android:id="@+id/text_Rwins"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Example3"
+        android:layout_below="@id/text_rankStats"
+        android:layout_toRightOf="@id/text_summonerName"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Loses"
+        android:layout_below="@id/text_Rwins"
+        android:id="@+id/text_rloses"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Example4"
+        android:layout_below="@id/text_Rwins"
+        android:layout_toRightOf="@id/text_summonerName"
+        android:id="@+id/textView" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="KDA"
+        android:layout_below="@id/text_rloses"
+        android:id="@+id/text_kda"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Example5"
+        android:layout_toRightOf="@id/text_summonerName"
+        android:layout_below="@+id/textView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Example"
+        android:layout_below="@id/text_kda"
+        android:layout_toRightOf="@id/text_summonerName"
+        />
 </RelativeLayout>
