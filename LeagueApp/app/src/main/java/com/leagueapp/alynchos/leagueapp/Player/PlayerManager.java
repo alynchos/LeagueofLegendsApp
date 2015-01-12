@@ -7,6 +7,13 @@ import android.widget.Toast;
 
 import com.leagueapp.alynchos.leagueapp.Debug.Logger;
 
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.util.EntityUtils;
+
 /**
  * Created by Alex Lynchosky on 1/11/2015.
  */
@@ -23,6 +30,45 @@ public class PlayerManager {
             mPlayerManager = new PlayerManager();
         }
         return mPlayerManager;
+    }
+
+    /* Sends data to Riot */
+    public void pingRiot(final String getURL) {
+
+        AsyncTask<Void, Void, String> task = (new AsyncTask<Void, Void, String>() {
+            @Override
+            protected String doInBackground(Void... voids) {
+                // Testing riot api key!!!1!!1
+                HttpClient client = new DefaultHttpClient();
+
+                HttpGet get = new HttpGet(getURL);
+
+                HttpResponse responseGet = null;
+
+                String response = "failed";
+
+                try {
+                    responseGet = client.execute(get);
+
+                    HttpEntity resEntityGet = responseGet.getEntity();
+
+                    response = EntityUtils.toString(resEntityGet);
+                } catch (Exception e) {
+                    logger.debug("FAILED!!!!");
+                    e.printStackTrace();
+                }
+                return response;
+            }
+
+            @Override
+            protected void onPostExecute(String response) {
+                logger.debug(response);
+                /*Intent intent = new Intent();
+                intent.setAction(UPDATE_UI);
+                mActivity.sendBroadcast(intent);*/
+            }
+        });
+        task.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
     }
 
     /**
@@ -60,7 +106,7 @@ public class PlayerManager {
 
             @Override
             protected void onPostExecute(Integer count) {
-                Toast.makeText(mActivity, "Data Saved", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(mActivity, "Data Saved", Toast.LENGTH_SHORT).show();
             }
         });
         task.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
@@ -68,7 +114,7 @@ public class PlayerManager {
 
     /* Private helpers for saving */
 
-    private void syncPlayerData(){
+    private void syncPlayerData() {
         //TODO: SAVE PLAYER DATA HERE
     }
 

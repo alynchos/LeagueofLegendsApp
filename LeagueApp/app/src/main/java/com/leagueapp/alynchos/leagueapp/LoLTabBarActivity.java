@@ -12,12 +12,19 @@ import com.leagueapp.alynchos.leagueapp.Player.PlayerManager;
 import com.leagueapp.alynchos.leagueapp.Player.PlayerStats;
 import com.leagueapp.alynchos.leagueapp.SaveData.FeedReaderDbHelper;
 
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.util.EntityUtils;
+
 /**
  * Created by Alex Lynchosky on 1/11/2015.
  */
 public class LoLTabBarActivity extends TabActivity {
     /* Debugging */
-    private static final String TAG    = LoLTabBarActivity.class.getSimpleName();
+    private static final String TAG = LoLTabBarActivity.class.getSimpleName();
     private static final Logger logger = new Logger(TAG);
 
     /* Main Tab */
@@ -27,10 +34,10 @@ public class LoLTabBarActivity extends TabActivity {
     private TabHost mTabHost;
 
     /* Tab Names */
-    private final String TAB_CHARACTER      = "character";
-    private final String TAB_INVENTORY      = "inventory";
-    private final String TAB_COMBAT         = "combat";
-    private final String TAB_NOTES         = "notes";
+    private final String TAB_CHARACTER = "character";
+    private final String TAB_INVENTORY = "inventory";
+    private final String TAB_COMBAT = "combat";
+    private final String TAB_NOTES = "notes";
 
     /* Save Data */
     private static FeedReaderDbHelper feedReaderDbHelper;
@@ -75,29 +82,33 @@ public class LoLTabBarActivity extends TabActivity {
                 logger.debug("Changing to " + tabId + " tab");
             }
         });
+
     }
 
     @Override
-    public void onResume(){
+    public void onResume() {
         super.onResume();
         logger.debug("onResume");
         PlayerManager playerManager = PlayerManager.getInstance();
         playerManager.syncWithDatabase(this);
+        // Testing riot api key!!!1!!1
+        String getURL = "https://na.api.pvp.net/api/lol/na/v1.4/summoner/by-name/RiotSchmick?api_key=a9e954b7-95f7-477b-acfd-a333563591d0"; //The API service URL
+        playerManager.pingRiot(getURL);
     }
 
     @Override
-    public void onPause(){
+    public void onPause() {
         super.onPause();
         PlayerManager playerManager = PlayerManager.getInstance();
         playerManager.saveData(this);
     }
 
     @Override
-    public void onDestroy(){
+    public void onDestroy() {
         super.onDestroy();
     }
 
-    public static LoLTabBarActivity getInstance(){
+    public static LoLTabBarActivity getInstance() {
         return lolTabBarActivity;
     }
 }
