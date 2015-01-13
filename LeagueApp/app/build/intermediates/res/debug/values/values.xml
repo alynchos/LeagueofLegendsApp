@@ -163,8 +163,12 @@
     <eat-comment/>
     <string name="action_settings">Settings</string>
     <string name="app_name">LeagueApp</string>
+    <string name="button_send">Find Stats</string>
     <string name="hello_world">Hello world!</string>
+    <string name="showingUserInputs">What user imput and program output</string>
     <string name="tab_player_stats">Statistics</string>
+    <string name="title_activity_show_user_input_temp_and_url_output">ShowUserInputTempAndUrlOutput</string>
+    <string name="userInput_summonerName">Enter Summoner Name</string>
     <!-- From: file:/C:/Users/ChiralAlchemist/Documents/LoLApi/LeagueApp/app/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">

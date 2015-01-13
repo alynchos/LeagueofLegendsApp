@@ -1367,11 +1367,11 @@ containing a value of this type.
         public static final int text_rank=0x7f080041;
         public static final int text_rankStats=0x7f080042;
         public static final int text_rloses=0x7f080044;
-        public static final int text_summonerName=0x7f080040;
-        public static final int text_test=0x7f08003f;
+        public static final int text_summonerName=0x7f08003f;
         public static final int title=0x7f080027;
         public static final int up=0x7f080008;
         public static final int useLogo=0x7f080012;
+        public static final int userInput_summonerName=0x7f080040;
         public static final int withText=0x7f08001a;
         public static final int wrap_content=0x7f08001d;
     }
@@ -1402,12 +1402,14 @@ containing a value of this type.
         public static final int abc_search_dropdown_item_icons_2line=0x7f030014;
         public static final int abc_search_view=0x7f030015;
         public static final int abc_simple_dropdown_hint=0x7f030016;
-        public static final int player_stats_layout=0x7f030017;
-        public static final int splash_screen_layout=0x7f030018;
-        public static final int support_simple_spinner_dropdown_item=0x7f030019;
+        public static final int activity_show_user_input_temp_and_url_output=0x7f030017;
+        public static final int player_stats_layout=0x7f030018;
+        public static final int splash_screen_layout=0x7f030019;
+        public static final int support_simple_spinner_dropdown_item=0x7f03001a;
     }
     public static final class menu {
-        public static final int menu_splash_screen=0x7f0c0000;
+        public static final int menu_show_user_input_temp_and_url_output=0x7f0c0000;
+        public static final int menu_splash_screen=0x7f0c0001;
     }
     public static final class string {
         public static final int abc_action_bar_home_description=0x7f0a0000;
@@ -1428,8 +1430,12 @@ containing a value of this type.
         public static final int abc_toolbar_collapse_description=0x7f0a000f;
         public static final int action_settings=0x7f0a0010;
         public static final int app_name=0x7f0a0011;
-        public static final int hello_world=0x7f0a0012;
-        public static final int tab_player_stats=0x7f0a0013;
+        public static final int button_send=0x7f0a0012;
+        public static final int hello_world=0x7f0a0013;
+        public static final int showingUserInputs=0x7f0a0014;
+        public static final int tab_player_stats=0x7f0a0015;
+        public static final int title_activity_show_user_input_temp_and_url_output=0x7f0a0016;
+        public static final int userInput_summonerName=0x7f0a0017;
     }
     public static final class style {
         /**  Customize your theme here. 

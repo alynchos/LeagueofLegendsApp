@@ -6,22 +6,24 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="HELLO LEAGUE APP OF DESTINY"
-        android:id="@+id/text_test"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/text_test"
         android:text="Summoner Name : "
         android:id="@+id/text_summonerName"
         />
-    <TextView
+    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Example1"
-        android:layout_below="@id/text_test"
+        android:hint="@string/userInput_summonerName"
+        android:id="@+id/userInput_summonerName"
         android:layout_toRightOf="@id/text_summonerName"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/userInput_summonerName"
+        android:onClick="sendSummonerName"
+        android:text="@string/button_send" />
+
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
