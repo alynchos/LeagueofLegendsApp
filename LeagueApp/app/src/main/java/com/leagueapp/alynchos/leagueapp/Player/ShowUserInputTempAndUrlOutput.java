@@ -14,13 +14,13 @@ public class ShowUserInputTempAndUrlOutput extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Intent intentSN = getIntent();
-        String userInputSN = intentSN.getStringExtra(PlayerStats.SUMMONER_NAME);
+        Intent intentN = getIntent();
+        String userInputN = intentN.getStringExtra(PlayerStats.SUMMONER_NAME);
 
         TextView showingUserInput = new TextView(this);
         showingUserInput.setTextSize(40);
-        showingUserInput.setText(userInputSN);
-        getUserInfo(userInputSN);
+        showingUserInput.setText(userInputN);
+        //getUserInfo(userInputSN);
         setContentView(showingUserInput);
     }
 

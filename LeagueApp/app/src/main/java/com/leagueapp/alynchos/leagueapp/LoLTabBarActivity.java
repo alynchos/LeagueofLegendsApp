@@ -8,6 +8,7 @@ import android.widget.TabHost;
 import android.widget.TextView;
 
 import com.leagueapp.alynchos.leagueapp.Debug.Logger;
+import com.leagueapp.alynchos.leagueapp.Player.DBAdapter;
 import com.leagueapp.alynchos.leagueapp.Player.PlayerManager;
 import com.leagueapp.alynchos.leagueapp.Player.PlayerStats;
 import com.leagueapp.alynchos.leagueapp.SaveData.FeedReaderDbHelper;
@@ -22,7 +23,7 @@ import org.apache.http.util.EntityUtils;
 /**
  * Created by Alex Lynchosky on 1/11/2015.
  */
-public class LoLTabBarActivity extends TabActivity {
+public class    LoLTabBarActivity extends TabActivity {
     /* Debugging */
     private static final String TAG = LoLTabBarActivity.class.getSimpleName();
     private static final Logger logger = new Logger(TAG);
@@ -42,6 +43,7 @@ public class LoLTabBarActivity extends TabActivity {
     /* Save Data */
     private static FeedReaderDbHelper feedReaderDbHelper;
     private static boolean dataSaved = false;
+    private static DBAdapter playerDataBase;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
