@@ -23,16 +23,14 @@
         <activity
             android:name=".LoLTabBarActivity"
             android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name= "com.leagueapp.alynchos.leagueapp.customBroadcast"/>
+            </intent-filter>
         </activity>
         <activity
             android:name=".Player.PlayerStats"
             android:screenOrientation="portrait" >
         </activity>
-       <receiver android:name="com.leagueapp.alynchos.leagueapp.Player.CustomReciever">
-           <intent-filter>
-               <action android:name= "com.leagueapp.alynchos.leagueapp.customBroadcast"/>
-           </intent-filter>
-       </receiver>
 
         <activity
             android:name="com.leagueapp.alynchos.leagueapp.Player.ShowUserInputTempAndUrlOutput"

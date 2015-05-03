@@ -1,17 +1,22 @@
 package com.leagueapp.alynchos.leagueapp;
 
 import android.app.TabActivity;
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.widget.TabHost;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.leagueapp.alynchos.leagueapp.Debug.Logger;
 import com.leagueapp.alynchos.leagueapp.Player.DBAdapter;
 import com.leagueapp.alynchos.leagueapp.Player.PlayerManager;
 import com.leagueapp.alynchos.leagueapp.Player.PlayerStats;
 import com.leagueapp.alynchos.leagueapp.SaveData.FeedReaderDbHelper;
+import com.leagueapp.alynchos.leagueapp.Util.LoLConstants;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -44,6 +49,22 @@ public class    LoLTabBarActivity extends TabActivity {
     private static FeedReaderDbHelper feedReaderDbHelper;
     private static boolean dataSaved = false;
     private static DBAdapter playerDataBase;
+
+    // Testing broadcast receiver for Joe
+    private BroadcastReceiver testBroadcastReceiver = new BroadcastReceiver()
+    {
+        @Override
+        public void onReceive(Context context, Intent intent)
+        {
+            // Handle network mode change
+            String action = intent.getAction();
+
+            if (action.equals(LoLConstants.CUSTOM_BROADCAST))
+            {
+                Toast.makeText(context, "blah blabh blah here i am", Toast.LENGTH_SHORT).show();
+            }
+        }
+    };
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -85,6 +106,13 @@ public class    LoLTabBarActivity extends TabActivity {
             }
         });
 
+        /* Register Receivers */
+        registerReceiver(testBroadcastReceiver, new IntentFilter(LoLConstants.CUSTOM_BROADCAST));
+
+        /* Initialize the PlayerManager */
+        PlayerManager playerManager = PlayerManager.getInstance();
+        playerManager.setActivity(this);
+
     }
 
     @Override
@@ -108,6 +136,8 @@ public class    LoLTabBarActivity extends TabActivity {
     @Override
     public void onDestroy() {
         super.onDestroy();
+        /* Unregister the receivers */
+        unregisterReceiver(testBroadcastReceiver);
     }
 
     public static LoLTabBarActivity getInstance() {
