@@ -17,9 +17,12 @@ gen/
 
 # Ignore gradle files
 LeagueApp/.gradle/
+.gradle/
 LeagueApp/build/
+build/
 LeagueApp/app/app.iml
 LeagueApp/app/build/intermediates/
+intermediates/
 
 # Local configuration file (sdk path, etc)
 LeagueApp/local.properties
