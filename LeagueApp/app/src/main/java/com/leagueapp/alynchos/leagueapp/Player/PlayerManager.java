@@ -9,6 +9,7 @@ import android.content.ContentValues;
 
 import com.leagueapp.alynchos.leagueapp.Debug.Logger;
 import com.leagueapp.alynchos.leagueapp.SaveData.FeedReaderDbHelper;
+import com.leagueapp.alynchos.leagueapp.Util.LoLConstants;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -30,7 +31,7 @@ public class PlayerManager {
     private static final Logger logger = new Logger(TAG);
 
     private static PlayerManager mPlayerManager;
-
+    private Activity mActivity;
 
     public static PlayerManager getInstance() {
         if (mPlayerManager == null) {
@@ -69,17 +70,34 @@ public class PlayerManager {
 
             @Override
             protected void onPostExecute(String response) {
-
+                if(mActivity == null){
+                    logger.debug("mActivity is null!");
+                    return;
+                }
 
                 logger.debug(response);
 
                 Intent intent = new Intent();
-                intent.setAction("com.leagueapp.alynchos.leagueapp.customBroadcast");
-                sendBroadcast(intent);
+                intent.setAction(LoLConstants.CUSTOM_BROADCAST);
+                mActivity.sendBroadcast(intent);
             }
         });
         task.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
         //return riotResponse;
+    }
+
+    /*
+     * Getters and Setters
+     */
+
+    /* setActivity(Activity)
+     * @author Alex Lynchosky
+     * @param   set     - Setter for mActivity
+     * @return  None
+     * @brief Setter for the mActivity variable
+     */
+    public void setActivity(Activity set){
+        mActivity = set;
     }
 
 
