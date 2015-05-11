@@ -8,6 +8,7 @@ import android.widget.TabHost;
 import android.widget.TextView;
 
 import com.leagueapp.alynchos.leagueapp.Debug.Logger;
+import com.leagueapp.alynchos.leagueapp.Player.CustomReciever;
 import com.leagueapp.alynchos.leagueapp.Player.DBAdapter;
 import com.leagueapp.alynchos.leagueapp.Player.PlayerManager;
 import com.leagueapp.alynchos.leagueapp.Player.PlayerStats;
@@ -49,6 +50,7 @@ public class    LoLTabBarActivity extends TabActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         logger.debug("onCreate called");
+
 
         // Prevent launching the main activity on top of other activities
         // This will ensure we only have one instance displayed

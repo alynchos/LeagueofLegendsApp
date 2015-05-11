@@ -13,7 +13,7 @@ import javax.xml.datatype.Duration;
 public class CustomReciever extends BroadcastReceiver {
 
     public void onReceive(Context context, Intent intent){
-        Toast.makeText(context,"Custom Broadcast Recieved",Toast.LENGTH_SHORT);
+        Toast.makeText(context,"Custom Broadcast Recieved",Toast.LENGTH_SHORT).show();
 
     }
 

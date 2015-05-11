@@ -30,6 +30,7 @@ public class PlayerStats extends Activity {
     protected void onCreate(Bundle bundle) {
         super.onCreate(bundle);
         setContentView(R.layout.player_stats_layout);
+        CustomReciever reciever;
     }
 
 
