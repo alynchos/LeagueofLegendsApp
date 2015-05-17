@@ -25,7 +25,9 @@ LeagueApp/app/build/
 build/
 build
 LeagueApp/app/app.iml
+app/app.iml
 LeagueApp/app/build/intermediates/
+app/build/intermediates/
 intermediates/
 intermediates
 
