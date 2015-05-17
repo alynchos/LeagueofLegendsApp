@@ -8,6 +8,7 @@ LeagueApp/.idea/modules.xml
 LeagueApp/.idea/vcs.xml
 LeagueApp/.idea/workspace.xml
 LeagueApp/LeagueApp.iml
+LeagueApp/local.properties
 
 # built application files
 *.apk
@@ -32,13 +33,18 @@ LeagueApp/.gradle/
 .gradle/
 .gradle
 LeagueApp/build/
+LeagueApp/build/*
 LeagueApp/app/build/
+LeagueApp/app/build/*
 build/
+build/*
 build
 LeagueApp/app/app.iml
 app/app.iml
 LeagueApp/app/build/intermediates/
+LeagueApp/app/build/intermediates/*
 app/build/intermediates/
+app/build/intermediates/*
 intermediates/
 intermediates
 
